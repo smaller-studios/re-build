@@ -1,0 +1,16 @@
+{
+  "name": "property-controls",
+  "version": "0.0.60",
+  "description": "Expose dials and knobs for your components in design tools",
+  "repository": "blocks/blocks",
+  "main": "dist/property-controls.cjs.js",
+  "module": "dist/property-controls.esm.js",
+  "license": "MIT",
+  "scripts": {},
+  "devDependencies": {
+    "@babel/cli": "7.10.3",
+    "@babel/core": "7.10.3",
+    "@babel/preset-env": "7.10.3",
+    "@babel/preset-react": "7.10.1"
+  }
+}
