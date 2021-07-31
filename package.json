@@ -2,9 +2,91 @@
   "name": "re-build",
   "version": "1.0.0",
   "description": "The new way to develop, an attempt to create the future of no code development",
-  "main": "index.js",
+  
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "gatsby develop",
+    "build": "yarn gatsby build",
+    "build:packages": "preconstruct build",
+    "clean": "gatsby clean",
+    "lint": "eslint .",
+    "postinstall": "preconstruct dev",
+    "release": "yarn build:packages && changeset publish",
+    "test": "jest",
+    "test:deps": "manypkg check"
+  },
+  "workspaces": [
+    "packages/*"
+  ],
+  "preconstruct": {
+    "packages": [
+      "packages/blocks-ui",
+      "packages/react",
+      "packages/property-controls"
+    ]
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
+  },
+  "lint-staged": {
+    "*.js": [
+      "prettier --write"
+    ]
+  },
+  "jest": {
+    "testPathIgnorePatterns": [
+      "/.cache/",
+      "/packages/mdx/"
+    ],
+    "testEnvironment": "node"
+  },
+  "dependencies": {
+    "@babel/plugin-proposal-export-namespace-from": "7.10.1",
+    "@babel/preset-env": "7.10.3",
+    "@babel/preset-react": "7.10.1",
+    "@changesets/cli": "2.9.1",
+    "@emotion/core": "10.0.28",
+    "@manypkg/cli": "0.14.0",
+    "@mdx-js/mdx": "1.6.6",
+    "@mdx-js/react": "1.6.6",
+    "@preconstruct/cli": "1.1.14",
+    "@theme-ui/components": "0.3.1",
+    "@theme-ui/presets": "0.3.0",
+    "@theme-ui/prism": "0.3.0",
+    "babel-eslint": "10.1.0",
+    "eslint": "7.3.1",
+    "eslint-config-react-app": "5.2.1",
+    "eslint-plugin-flowtype": "5.1.3",
+    "eslint-plugin-import": "2.21.2",
+    "eslint-plugin-jest": "23.17.1",
+    "eslint-plugin-jsx-a11y": "6.3.1",
+    "eslint-plugin-react": "7.20.0",
+    "eslint-plugin-react-hooks": "4.0.4",
+    "gatsby": "2.23.11",
+    "gatsby-plugin-blocks": "0.0.79",
+    "gatsby-plugin-catch-links": "2.3.7",
+    "gatsby-plugin-fathom": "1.3.0",
+    "gatsby-plugin-manifest": "2.4.14",
+    "gatsby-plugin-mdx": "1.2.18",
+    "gatsby-plugin-react-helmet": "3.3.6",
+    "gatsby-plugin-theme-ui": "0.3.0",
+    "gatsby-source-filesystem": "2.3.14",
+    "husky": "4.2.5",
+    "jest": "26.1.0",
+    "lint-staged": "10.2.11",
+    "prettier": "2.0.5",
+    "react": "16.13.1",
+    "react-dom": "16.13.1",
+    "react-helmet": "6.1.0",
+    "theme-ui": "0.3.1"
+  },
+  "resolutions": {
+    "@emotion/core": "10.0.28",
+    "@mdx-js/react": "1.6.6",
+    "react": "16.13.1",
+    "react-dom": "16.13.1",
+    "theme-ui": "0.3.1"
   },
   "repository": {
     "type": "git",
