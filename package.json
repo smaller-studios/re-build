@@ -1,0 +1,27 @@
+{
+  "name": "re-build",
+  "version": "1.0.0",
+  "description": "The new way to develop, an attempt to create the future of no code development",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/smaller-studios/re-build.git"
+  },
+  "keywords": [
+    "blocks-ui",
+    "blocks",
+    "re-build",
+    "gatsby",
+    "builder",
+    "coder"
+  ],
+  "author": "smaller-studios",
+  "license": "GPL-3.0",
+  "bugs": {
+    "url": "https://github.com/smaller-studios/re-build/issues"
+  },
+  "homepage": "https://github.com/smaller-studios/re-build#readme"
+}
