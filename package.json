@@ -2,7 +2,6 @@
   "name": "re-build",
   "version": "1.0.0",
   "description": "The new way to develop, an attempt to create the future of no code development",
-  
   "scripts": {
     "start": "gatsby develop",
     "build": "yarn gatsby build",
