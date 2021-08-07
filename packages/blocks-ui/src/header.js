@@ -115,7 +115,7 @@ const Logo = () => (
         gridGap: 2
       }}
     >
-      Blocks
+      Built on Blocks
       <span
         sx={{
           fontSize: 0,

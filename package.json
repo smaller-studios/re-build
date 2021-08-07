@@ -4,12 +4,12 @@
   "description": "The new way to develop, an attempt to create the future of no code development",
   "scripts": {
     "start": "gatsby develop",
-    "build": "yarn gatsby build",
+    "build": "npm gatsby build",
     "build:packages": "preconstruct build",
     "clean": "gatsby clean",
     "lint": "eslint .",
     "postinstall": "preconstruct dev",
-    "release": "yarn build:packages && changeset publish",
+    "release": "npm build:packages && changeset publish",
     "test": "jest",
     "test:deps": "manypkg check"
   },
